@@ -2,7 +2,6 @@ from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
 from llama_index.llms.ollama import Ollama
 from llama_index.embeddings.ollama import OllamaEmbedding
 
-
 Settings.llm = Ollama(model="llama3.1", request_timeout=60.0)
 Settings.embed_model = OllamaEmbedding(model_name="nomic-embed-text")
 
@@ -24,3 +23,5 @@ while True:
     resposta = query_engine.query(pergunta)
     print("\nResposta da IA:")
     print(resposta)
+
+    
